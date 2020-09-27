@@ -1,0 +1,42 @@
+<!-- Representation of a single dog view-->
+
+
+<table class="animal" align="center">
+    <tr align="center">
+        <td colspan="2" class="animal_image_placeholder">
+            <a href="{% url 'animal_detail' animal.id%}">
+                <img class="animal_image" border="1" src="{{animal.profile_photo_link}}"/>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Имя: {{animal.animal_name}}, {{animal.species}}.
+        </td>
+        <td>
+            {% if animal.had_owner %}
+                На передержке
+            {% endif %}
+            {% if animal.animal_sex%}
+                {{animal.animal_sex}}
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {% if animal.animal_description%}
+                {{animal.animal_description}}
+            {% endif %}
+        </td>
+        <td>
+            {{animal.asylum}}
+        </td>
+    </tr>
+    <tr align="center">
+    <tr align="center">
+        <td colspan="2">
+            <a href="{{animal.profile_link}}">Ссылка на личную анкету животного</a>
+        </td>
+    </tr>
+</table>
+<hr>

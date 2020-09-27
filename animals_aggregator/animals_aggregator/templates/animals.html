@@ -1,0 +1,7 @@
+<!-- templates/animals.html -->
+{% extends 'base.html' %}
+{% block content %}
+    {% for animal in object_list %}
+        {% include '_animal.html' %}
+    {% endfor %}
+{% endblock content %}

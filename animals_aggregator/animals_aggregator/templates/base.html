@@ -1,0 +1,23 @@
+<!-- templates/base.html -->
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'animals_aggregator/style.css' %}">
+        <title>Animals</title>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="nav-left">
+                    <h1><a href="/animals">Animals</a></h1>
+                </div>
+                {% include '_navbar.html' %}
+                <div class="nav-right">
+                    Blank yet
+                </div>
+            </header>
+        {% block content %}
+        {% endblock content %}
+        </div>
+    </body>
+</html>
